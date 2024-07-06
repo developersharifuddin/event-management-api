@@ -14,15 +14,11 @@
 
 2. **Create a Laravel Project**:
 
-    ```bash
     composer create-project --prefer-dist laravel/laravel event-management-api
-    ```
 
-    ## change directory
+## change directory
 
-    ```bash
     cd event-management-api
-    ```
 
 ## Step 2: Set Up Environment
 
@@ -45,10 +41,7 @@ DB_PASSWORD=your_password
 
 ## 6. Kkey Generate
 
-```bash
-  php artisan key:generate
-
-```
+php artisan key:generate
 
 ## 7. Database Ccreate
 
@@ -56,9 +49,7 @@ DB_PASSWORD=your_password
 
 ## 8. Passport Install
 
-    ```bash
     php artisan install:api --passport
-    ```
 
 ## 9. Ssetup user model App/Models/User.php
 
@@ -84,17 +75,11 @@ DB_PASSWORD=your_password
 
 ## 10. Passport Key Generate
 
-```bash
-   php artisan passport:keys
-
-```
+php artisan passport:keys
 
 ## 11. Run vendor:publish
 
-    ```bash
     php artisan vendor:publish --tag=passport-config
-
-    ```
 
 ## 12. Run Install Passport Client
 
@@ -106,34 +91,24 @@ DB_PASSWORD=your_password
 
 ## 13. Publish
 
-    ```bash
-    php artisan vendor:publish --tag=passport-views
-
-````
+    php artisan vendor:publish --tag=passport-views`
 
 ## 14. Run command
 
-    ```bash
     php artisan config:cache
-    ```
 
-    ```bash
+
     php artisan config:clear
-    ```
 
-    ```bash
+
     php artisan config:optimize
-    ```
 
 ## 15. Start local server
 
-    ```bash
     php artisan serve
 
-    ```
-
-
 ## 16. Setup Mail Notification
+
      Register and login mailtrup account and copy nad paste .env file laravel 8+ mail testing script.
 
     MAIL_MAILER=smtp
@@ -141,5 +116,4 @@ DB_PASSWORD=your_password
     MAIL_PORT=2525
     MAIL_USERNAME=
     MAIL_PASSWORD=
-    MAIL_ENCRYPTION=null
-````
+    MAIL_ENCRYPTION=nul`
