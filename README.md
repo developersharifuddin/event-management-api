@@ -1,10 +1,11 @@
-## Event Management API
+## Event Management API Laravel 11 and implementation of email notifications.
 
 ## Features:
 
 1.  Laravel 11.0
-2.  REST Full API's -> Passport
+2.  REST Full API's : Passport
 3.  Database: MySql
+4.  Email-testing: Mailtroup
 
 ## Installation Instructions
 
@@ -14,7 +15,7 @@
 
 ## Create a Laravel Project
 
-composer create-project --prefer-dist laravel/laravel event-management-api
+    composer create-project --prefer-dist laravel/laravel event-management-api
 
 ## change directory
 
@@ -23,6 +24,7 @@ composer create-project --prefer-dist laravel/laravel event-management-api
 ## Set Up Environment
 
         .env file
+
         DB_CONNECTION=mysql
         DB_HOST=127.0.0.1
         DB_PORT=3306
@@ -41,7 +43,7 @@ composer create-project --prefer-dist laravel/laravel event-management-api
 
 ## 6. Kkey Generate
 
-php artisan key:generate
+    php artisan key:generate
 
 ## 7. Database Ccreate
 
@@ -116,4 +118,6 @@ php artisan passport:keys
     MAIL_PORT=2525
     MAIL_USERNAME=
     MAIL_PASSWORD=
-    MAIL_ENCRYPTION=nul`
+    MAIL_ENCRYPTION=nul
+
+## Run API project then run the GUI project.
