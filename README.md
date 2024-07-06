@@ -36,12 +36,12 @@ DB_PASSWORD=your_password
 
 ## Step 3: change file config/database.php
 
-'default' => env('DB_CONNECTION', 'mysql'),
+    'default' => env('DB_CONNECTION', 'mysql'),
 
-'mysql' => [
-'driver' => 'mysql',
-'database' => env('DB_DATABASE', 'laravel'),
-'collation' => env('DB_COLLATION', 'utf8mb4_general_ci'), ]
+    'mysql' => [
+    'driver' => 'mysql',
+    'database' => env('DB_DATABASE', 'laravel'),
+    'collation' => env('DB_COLLATION', 'utf8mb4_general_ci'), ]
 
 ## 6. Kkey Generate
 
@@ -56,40 +56,31 @@ DB_PASSWORD=your_password
 
 ## 8. Passport Install
 
-```bash
-   php artisan install:api --passport
-```
+    ```bash
+    php artisan install:api --passport
+    ```
 
 ## 9. Ssetup user model App/Models/User.php
 
-<?php
- 
-namespace App\Models;
- 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Foundation\Auth\User as Authenticatable;
-use Illuminate\Notifications\Notifiable;
-use Laravel\Passport\HasApiTokens;
- 
-class User extends Authenticatable
-{
-    use HasApiTokens, HasFactory, Notifiable;
-}
+    use Laravel\Passport\HasApiTokens;
+    class User extends Authenticatable
+    {
+        use HasApiTokens, HasFactory, Notifiable;
+    }
 
 ## Setup config/auth.php
-'guards' => [
-    'web' => [
-        'driver' => 'session',
-        'provider' => 'users',
-    ],
- 
-    'api' => [
-        'driver' => 'passport',
-        'provider' => 'users',
-    ],
-],
 
- 
+    'guards' => [
+        'web' => [
+            'driver' => 'session',
+            'provider' => 'users',
+        ],
+
+        'api' => [
+            'driver' => 'passport',
+            'provider' => 'users',
+        ],
+    ],
 
 ## 10. Passport Key Generate
 
@@ -100,58 +91,55 @@ class User extends Authenticatable
 
 ## 11. Run vendor:publish
 
-```bash
-   php artisan vendor:publish --tag=passport-config
+    ```bash
+    php artisan vendor:publish --tag=passport-config
 
-```
+    ```
 
 ## 12. Run Install Passport Client
 
- Copy and pased client id and screet .env file
- 
-PASSPORT_PASSWORD_CLIENT_ID =  'this'
-PASSPORT_PASSWORD_SECRET =  'this'   
-OAUTH_TOKEN_URL = 'base-url/public/oauth/token'
- 
+     Copy and pased client id and screet .env file
+
+        PASSPORT_PASSWORD_CLIENT_ID =  'this'
+        PASSPORT_PASSWORD_SECRET =  'this'
+        OAUTH_TOKEN_URL = 'base-url/public/oauth/token'
 
 ## 13. Publish
 
-```bash
-   php artisan vendor:publish --tag=passport-views
+    ```bash
+    php artisan vendor:publish --tag=passport-views
 
-```
+````
 
 ## 14. Run command
 
-```bash
-   php artisan config:cache
-```
+    ```bash
+    php artisan config:cache
+    ```
 
-```bash
-   php artisan config:clear
-```
+    ```bash
+    php artisan config:clear
+    ```
 
-```bash
-   php artisan config:optimize
-```
+    ```bash
+    php artisan config:optimize
+    ```
 
 ## 15. Start local server
 
-```bash
-   php artisan serve
+    ```bash
+    php artisan serve
 
-```
-
-
+    ```
 
 
 ## 16. Setup Mail Notification
-Register and login mailtrup account and copy nad paste .env file laravel 8+ mail testing script.
+     Register and login mailtrup account and copy nad paste .env file laravel 8+ mail testing script.
 
-
-MAIL_MAILER=smtp
-MAIL_HOST=sandbox.smtp.mailtrap.io
-MAIL_PORT=2525
-MAIL_USERNAME=
-MAIL_PASSWORD=
-MAIL_ENCRYPTION=null
+    MAIL_MAILER=smtp
+    MAIL_HOST=sandbox.smtp.mailtrap.io
+    MAIL_PORT=2525
+    MAIL_USERNAME=
+    MAIL_PASSWORD=
+    MAIL_ENCRYPTION=null
+````
