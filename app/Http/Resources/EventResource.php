@@ -33,25 +33,25 @@ class EventResource extends JsonResource
      * @param  Request  $request
      * @return array
      */
-    public function with($request)
-    {
-        return [
-            'meta' => [
-                'key' => true,
-                'total' => $this->total(),
-                'per_page' => $this->perPage(),
-                'current_page' => $this->currentPage(),
-                'last_page' => $this->lastPage(),
-                'first_page_url' => $this->url(1),
-                'last_page_url' => $this->url($this->lastPage()),
-                'next_page_url' => $this->nextPageUrl(),
-                'prev_page_url' => $this->previousPageUrl(),
-                'path' => $this->path(),
-                'from' => $this->firstItem(),
-                'to' => $this->lastItem(),
-            ],
-        ];
-    }
+    // public function with($request)
+    // {
+    //     return [
+    //         'meta' => [
+    //             'key' => true,
+    //             'total' => $this->total(),
+    //             'per_page' => $this->perPage(),
+    //             'current_page' => $this->currentPage(),
+    //             'last_page' => $this->lastPage(),
+    //             'first_page_url' => $this->url(1),
+    //             'last_page_url' => $this->url($this->lastPage()),
+    //             'next_page_url' => $this->nextPageUrl(),
+    //             'prev_page_url' => $this->previousPageUrl(),
+    //             'path' => $this->path(),
+    //             'from' => $this->firstItem(),
+    //             'to' => $this->lastItem(),
+    //         ],
+    //     ];
+    // }
 
 
     /**
@@ -61,8 +61,8 @@ class EventResource extends JsonResource
      * @param  \Illuminate\Http\JsonResponse  $response
      * @return void
      */
-    public function withResponse($request, $response)
-    {
-        $response->header('X-Value', 'True');
-    }
+    // public function withResponse($request, $response)
+    // {
+    //     $response->header('X-Value', 'True');
+    // }
 }

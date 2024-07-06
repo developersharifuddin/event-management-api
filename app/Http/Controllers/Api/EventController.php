@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Log;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Resources\EventResource;
+use App\Http\Resources\EventCollection;
 use App\Http\Requests\StoreEventRequest;
 use App\Http\Requests\UpdateEventRequest;
 
@@ -46,8 +47,9 @@ class EventController extends Controller
                 ], 200);
             }
 
-            $eventsResource = EventResource::collection($events);
-            return $eventsResource->response()->setStatusCode(200);
+            // $eventsResource = EventResource::collection($events);
+            // return $eventsResource->response()->setStatusCode(200);
+            return response()->json(new EventCollection($events))->setStatusCode(200);
         } catch (\Exception $error) {
             Log::error('An error occurred while fetching events', [
                 'error' => $error->getMessage(),
