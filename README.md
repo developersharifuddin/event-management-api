@@ -10,25 +10,25 @@
 
 ### Step 1: Install Laravel
 
-1. **Install Composer**
+## Install Composer
 
-2. **Create a Laravel Project**:
+## Create a Laravel Project
 
-    composer create-project --prefer-dist laravel/laravel event-management-api
+composer create-project --prefer-dist laravel/laravel event-management-api
 
 ## change directory
 
     cd event-management-api
 
-## Step 2: Set Up Environment
+## Set Up Environment
 
-.env file
-DB_CONNECTION=mysql
-DB_HOST=127.0.0.1
-DB_PORT=3306
-DB_DATABASE=event_management
-DB_USERNAME=root
-DB_PASSWORD=your_password
+        .env file
+        DB_CONNECTION=mysql
+        DB_HOST=127.0.0.1
+        DB_PORT=3306
+        DB_DATABASE=event_management
+        DB_USERNAME=root
+        DB_PASSWORD=your_password
 
 ## Step 3: change file config/database.php
 
@@ -91,7 +91,7 @@ php artisan passport:keys
 
 ## 13. Publish
 
-    php artisan vendor:publish --tag=passport-views`
+    php artisan vendor:publish --tag=passport-views
 
 ## 14. Run command
 
